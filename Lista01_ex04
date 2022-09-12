@@ -1,0 +1,15 @@
+using System;
+/*Faça o algoritmo (diagrama de blocos e português estruturado) para calcular quanto será pago por um produto (PAG), sendo que o preço do produto (PR) e o desconto (D) são fornecidos pelo usuário. Apresentar o valor a ser pago pelo produto. */
+
+class Program {
+  public static void Main (string[] args) {
+    double PR,D,V,PAG ;
+    Console.Write ("Digite o valor do produto: ");
+    PR=double.Parse(Console.ReadLine ());
+    Console.Write ("Digite quantos % de desconto: ");
+    D=double.Parse(Console.ReadLine());
+    V=(D*PR)/100;
+    PAG= PR-V;
+    Console.WriteLine("O valor a ser pago será: {0}",PAG);
+  }
+}

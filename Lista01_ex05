@@ -1,0 +1,14 @@
+using System;
+/*Faça o algoritmo (diagrama de blocos e português estruturado) para calcular qual foi a porcentagem de desconto dada em um determinado produto (DESC), sabendo-se o preço original do produto (PRECO) e o preço que foi cobrado por ele depois do desconto (PRECOF).*/
+
+class Program {
+  public static void Main (string[] args) {
+   double PRECO,PRECOF,DESC;
+    Console.Write ("Digite o preço do produto: ");
+    PRECO=double.Parse(Console.ReadLine ());
+    Console.Write ("Digite o preço com desconto: ");
+    PRECOF=double.Parse(Console.ReadLine());
+    DESC= ((PRECO-PRECOF)/PRECO)*100d;
+    Console.WriteLine("O desconto foi de: {0}%",DESC);
+  }
+}

@@ -1,0 +1,16 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+   
+   double A, B, C, RESULTADO;
+
+Console.WriteLine ("valor de A" );
+A=double.Parse(Console.ReadLine());
+Console.WriteLine ("valor de B" );  
+B=double.Parse(Console.ReadLine());
+C=(A-B)*A/3;
+RESULTADO=C-100;
+Console.WriteLine ("O resultado da operação foi: {0}", RESULTADO);
+  }
+}

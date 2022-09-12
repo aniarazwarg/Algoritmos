@@ -1,0 +1,19 @@
+using System;
+/*Faça o algoritmo (diagrama de blocos e português estruturado) que calcule o valor em Reais 
+(VAL_REAL), correspondente aos dólares que um turista possui no cofre do hotel. O programa deve
+solicitar os seguintes dados: Quantidade de dólares guardados no cofre (VAL_DOLAR) e cotação do dólar naquele dia (COT). */
+class Program {
+  public static void Main (string[] args) {
+    double VAL_DOLAR,COT,VAL_REAL;
+    Console.WriteLine("Digite o valor(em dolares) em cofre" );
+    VAL_DOLAR=double.Parse(Console.ReadLine ());
+    Console.WriteLine ("Digite a cotação de hoje" );
+   // string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}");
+    COT=double.Parse(Console.ReadLine ());
+   // string= COT.ToString(CultureInfo.CreateSpecificCulture("en-US"));
+  
+    VAL_REAL=VAL_DOLAR*COT;
+   // VAL_REAL=double.Parse(Console.ReadLine());
+    Console.Write("voce tem R${0}",VAL_REAL);
+  }
+}

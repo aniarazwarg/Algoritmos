@@ -1,0 +1,16 @@
+using System;
+
+class Program {
+  /* Faça o algoritmo para calcular a área (AREA) e o perímetro (P) de uma sala, sendo que os comprimentos (L e C) são fornecidos pelo usuário. Apresente a área e o perímetro depois de calculados. */
+  public static void Main (string[] args) {
+     double l , c , area , p ;
+    Console.Write ("digite a largura: ");
+    l = double.Parse(Console.ReadLine());
+    Console.Write ("digite o comprimento: ");
+    c = double.Parse(Console.ReadLine());
+    area= l * c ;
+    Console.WriteLine ("A área é: {0}",area);
+    p= (l + c) *2 ;
+    Console.WriteLine ("O perímetro é: {0}",p);
+  }
+}

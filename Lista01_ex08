@@ -1,0 +1,26 @@
+using System;
+/*08)Faça o algoritmo (diagrama de blocos e português estruturado) para calcular o valor a ser pago pelo período de estacionamento do automóvel (PAG). O usuário entra com os seguintes dados: hora (HE) e minuto (ME) de entrada, hora (HS) e minuto (MS) de saída. Sabe-se que este estacionamento cobra R$ 4,00, mas calcula as frações de hora também. Por exemplo, se a pessoa ficar 1 hora e quinze minutos, pagará R$ 5,00 (R$ 4,00 pela hora e R$ 1,00 pelos quinze minutos). */
+class Program {
+  public static void Main (string[] args) {
+  double HE,ME,HS,MS,PAG,VM;
+  Console.Write ("Digite a hora da entrada: ");
+  HE=double.Parse(Console.ReadLine ());
+  Console.Write ("Digite os minutos da entrada: ");
+  ME=double.Parse(Console.ReadLine());
+  Console.Write ("Digite o a hora da saída: ");
+  HS=double.Parse(Console.ReadLine ());
+  Console.Write ("Digite os minutos dada saída: ");
+  MS=double.Parse(Console.ReadLine());
+/*MT=(HS-HE)*60;
+PAG=MT+(MS-ME)*0.0666666666666667;*/
+/*PAG=4*(HS-HE)+((MS-ME)/60);*/
+/*MT=(HS-HE)*60;
+PAG=MT*0.0666666666666667+(MS-ME)*0,0666666666666667;*/
+
+ VM=0.0666666666666667;
+ /* PAG=(((HS*60)*VM)+(MS*VM))-(((HE*60)*VM)+(ME*VM));*/
+     PAG=((HS*60+MS)-(HE*60+ME))*VM;
+  Console.WriteLine("O valor a ser pago será:R${0:F2}",PAG);
+    
+  }
+}

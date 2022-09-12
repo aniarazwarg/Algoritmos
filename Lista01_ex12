@@ -1,0 +1,21 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+double A, B, C,D;
+    
+Console.WriteLine("A variavel A vale:");
+ A=double.Parse(Console.ReadLine());
+Console.WriteLine("A variavel B vale:");
+ B=double.Parse(Console.ReadLine());
+C=(A+B)*B;
+D=C*B/(A*A);
+A=D/(C+B);
+B=B+A;
+Console.WriteLine("A variavel A vale:{0}",A);
+Console.WriteLine("A variavel B vale:{0}",B);
+Console.WriteLine("A variavel C vale:{0}",C);
+Console.WriteLine("A variavel D vale:{0}",D);
+  }
+}

@@ -1,0 +1,20 @@
+using System;
+/* Faça o algoritmo (diagrama de blocos e português estruturado) que receba dois valores inteiros nas
+variáveis A e B. O programa deve trocar os valores entre as variáveis (ou seja, ao término do programa a variável A deve ter o valor inicial de B e vice-versa). Apresentar as duas variáveis o final.  */
+class Program {
+  public static void Main (string[] args) {
+
+int a,b,temp;
+    Console.WriteLine("Digite o valor de a" );
+    a=int.Parse (Console.ReadLine ());
+    Console.WriteLine ("Digite ovalor de b" );
+    b=int.Parse (Console.ReadLine ());
+    Console.WriteLine("valores antes da troca a={0} b={1}",a,b);
+ 
+    temp= a;
+    a=b ;
+    b=temp ; 
+    Console.Write("valores depois da troca a={0} b={1}",a,b);
+     
+  }
+}
