@@ -1,0 +1,29 @@
+using System;
+/*Construa um programa que leia vários números inteiros e mostre qual foi o maior valor fornecido. O final da lista de produtos será indicado quando o usuário entrar com um valor negativo (esse valor não deve fazer parte da comparação de valores). */
+class Program {
+  public static void Main (string[] args) {
+     long numdig=0, maValor=0 ;
+
+    
+      
+    do{
+      
+     for(long i=1; i<=1; i++)
+    {
+      do
+      {
+        Console.Write ("Digite um valor inteiro: ",i);
+        numdig=long.Parse(Console.ReadLine());
+       
+        if (numdig>maValor)
+          maValor=numdig;
+                  
+      }while(numdig>=0);
+    }
+   
+
+    Console.WriteLine ("O maior valor é: {0}.",maValor);
+    }while(numdig<0);
+
+  }
+}

@@ -1,0 +1,28 @@
+using System;
+/*Construa um programa que apresente o peso total que será carregado por um caminhão. Sabe-se que esse caminhão carrega 25 caixas, com pesos diferentes. Será entrada do programa o peso (P) de cada uma das caixas. */
+class Program {
+  public static void Main (string[] args) {
+    double qtdcaixa, pecaixa=0 , P=0;
+    do
+    {
+      Console.WriteLine ("Digite a quantidade de Caixas: ");
+      qtdcaixa=double.Parse(Console.ReadLine());
+      if(qtdcaixa>=25)
+        Console.WriteLine("Quantidade de Caixas superior à 25.");
+      
+    }while(qtdcaixa>=25);
+    
+    for(double i=1; i<=qtdcaixa; i++)
+    {
+      do
+      {
+        Console.WriteLine ("Peso da {0}ª caixa em Kg.: ",i);
+        pecaixa=double.Parse(Console.ReadLine());
+        if(pecaixa<=0)
+          Console.WriteLine("Peso inválido");
+          P+=pecaixa;        
+      }while(pecaixa<=0);
+    }
+    Console.WriteLine ("O peso total é: {0}kg.",P);
+  }
+}

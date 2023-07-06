@@ -1,0 +1,34 @@
+using System;
+/*Construa um programa que calcule a área total de uma residência (sala, cozinha, quartos, etc., sendo todos eles retangulares). O usuário deverá entrar com a largura (L) e o comprimento 
+
+(C) de cada cômodo da casa. Em seguida deverá ser apresentada uma pergunta, solicitando a confirmação do usuário para continuar com a entrada de dados (a confirmação será dada quando o usuário entrar com “S”). Caso ele entre com o valor “N”. Deverá ser apresentada a área total da casa. 
+
+OBS: Não se esqueça de validar a entrada da resposta do usuário, que só pode aceitar os caracteres “S” ou “N”. */
+class Program {
+  public static void Main (string[] args) {
+     double l , c , area , op;
+    do{
+      do{
+       do{ Console.Write ("digite a largura do cômodo: ");
+      l = double.Parse(Console.ReadLine());
+       }while(l<=0);
+      do{Console.Write ("digite o comprimento do cômodo: ");
+      c = double.Parse(Console.ReadLine());
+        }while(c>=0);
+        
+    area= l * c ;
+   
+    Console.Write ("deseja incluir novo comodo ? ");
+     Console.Write ("digite: 'S' ou 'N'. ");
+    op= Console.ReadLine().ToUpper(); 
+    switch (op)
+      case "S":
+    }while(l!=0 && c!=0);
+    break;
+    case "N":
+    Console.WriteLine ("A área é: {0}",area);
+    default:
+    Console.WriteLine ("opção invalida");
+    }while(l!=0 && c!=0);
+  }
+}

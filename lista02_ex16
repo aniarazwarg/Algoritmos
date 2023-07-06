@@ -1,0 +1,44 @@
+using System;
+/*Construa um algoritmo que calcule e apresente quanto deve ser pago por um produto considerando a leitura do preço de etiqueta (PE) e o código da condição de pagamento (CP). Utilize para os cálculos a tabela de condições de pagamento a seguir: 
+
+1 À vista em dinheiro ou cheque, com 10% de desconto 
+2 À vista com cartão de crédito, com 5% de desconto 
+3 Em 2 vezes, preço normal de etiqueta sem juros 
+4 Em 3 vezes, preço de etiqueta com acréscimo de 10% 
+
+*/
+class Program {
+  public static void Main (string[] args) {
+    string CP;
+    double PE , PAG, DSC, PAR ;
+    Console.Write ("Digite o valor em etiqueta: R$");
+    PE=double.Parse(Console.ReadLine()); 
+   Console.Write ("Digite o código da condição de pagamento: ");
+    CP=Console.ReadLine(); 
+    switch (CP) 
+    {
+      case"1":
+      DSC=(10*PE)/100; 
+      PAG=PE-DSC;
+      Console.WriteLine("À vista em dinheiro ou cheque, com 10% de desconto, R${0}",PAG);
+      break;
+      case"2":
+      DSC=(5*PE)/100; 
+      PAG=PE-DSC;
+      Console.WriteLine(" À vista com cartão de crédito, com 5% de desconto, R${0}",PAG);
+      break;
+      case"3":
+      PAG=PE/2;
+      Console.WriteLine(" R${0} em duas parcelas de R${1}, sem juros.",PE ,PAG);
+      break;
+      case"4":
+      DSC=(10*PE)/100; 
+      PAG=PE+DSC;
+      PAR=PAG/3;
+      Console.WriteLine(" R${0} em 3 parcelas de R${1:F2}, com acréscimo de 10%.",PAG ,PAR);
+      break;
+      default: 
+      break;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+using System;
+/*Construa um algoritmo que determine quanto será gasto para encher o tanque de um carro (VG), sabendo-se que o preço da gasolina é de R$ 1,80 e o preço do álcool é de R$ 1,00. O usuário fornecerá os seguintes dados: Tipo de carro (TC) (G – gasolina ou A – álcool) e Capacidade do tanque (CT), em litros. */
+class Program {
+  public static void Main (string[] args) { 
+    double CT,VG;
+     String TC;
+    Console.Write ("Qual sera o combustivel (G ou A)?  ");
+    TC =Console.ReadLine();
+    Console.Write ("Qual a capacidade do tanque do carro (em litros)? ");
+     CT =double.Parse(Console.ReadLine());
+      
+    
+    if (TC == "G")
+      {
+       VG=1.80*CT;
+        Console.WriteLine("Voce gastará: R$  {0:F2}",VG);
+      }
+    else
+    {
+     VG=1*CT;
+    Console.WriteLine("Voce gastará: R$  {0:F2}",VG);
+    }
+  }
+}

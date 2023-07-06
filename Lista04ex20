@@ -1,0 +1,97 @@
+using System;
+// Fazer um algoritmo que mostre quantos dias existem entre um intervalo de datas, onde a data  inferior e a data superior estão no formato dd/mm.  
+class Program {
+  public static void Main (string[] args) {
+    int[]dd = new int[2];
+    int[]mm = new int[2];
+    int tdm=0 , mt , i=0;
+    string op;
+    
+       for(int i=0;i<2;i++)
+         do{do
+      {
+        Console.Write("digite {0}º mes:  ",i+1); 
+        mm[i]= int.Parse(Console.ReadLine()); 
+      }while(mm[i]>12);
+
+      if(mm[i]==1||mm[i]==3||mm[i]==5||mm[i]==7||mm[i]==8||mm[i]==10||mm[i]==12)
+      {
+        tdm=30;
+        do
+      {
+        Console.Write("digite o {0}º dia: " ,i+1); 
+        dd[i]= int.Parse(Console.ReadLine()); 
+      }while(dd[i]>30);
+     
+      }
+      if(mm[i]==4||mm[i]==6||mm[i]==9||mm[i]==11)
+      {
+        tdm=31;
+        do
+      {
+        Console.Write("digite o {0}º dia: " ,i+1); 
+        dd[i]= int.Parse(Console.ReadLine()); 
+      }while(dd[i]>31);
+     
+      }
+      if(mm[i]==2)
+        
+        do{
+        Console.WriteLine("╔══════════════════╗ ");
+        Console.WriteLine("║O ano é bissexto ?║");
+        Console.WriteLine("║digite: S ou N    ║");
+        Console.WriteLine("╚══════════════════╝ ");
+        op = Console.ReadLine().ToUpper(); 
+  
+        switch(op)
+        {
+          case "S":
+            
+           tdm=29;
+              do
+      {
+        Console.Write("digite o {0}º dia: " ,i+1); 
+        dd[i]= int.Parse(Console.ReadLine()); 
+      }while(dd[i]>29);
+     
+            
+            
+          break;
+          case "N":
+            
+              tdm=28;
+             do
+      {
+        Console.Write("digite o {0}º dia: " ,i+1); 
+        dd[i]= int.Parse(Console.ReadLine()); 
+      }while(dd[i]>28);
+               
+          break;
+        }
+        }while(op!="S"&&op!="N");
+           
+       
+      
+        
+      
+        
+          mt=mm[1]-mm[0];
+          Console.WriteLine("mes total é {0}",Math.Abs(mt));   
+        
+        //  if(dd[0]<dd[1])
+        // {
+        //    mt=mm[0]-mm[1];
+        //   Console.WriteLine("mes total: ",mt);  
+        // }
+      Console.WriteLine(""); 
+           }while(i==0);
+     
+      
+        
+   
+
+
+   
+  }
+  }
+  

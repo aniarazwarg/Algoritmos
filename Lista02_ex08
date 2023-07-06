@@ -1,0 +1,31 @@
+using System;
+/*Construa um algoritmo que apresente o nome e o salário dos funcionários, de acordo com os seguintes critérios: 
+Salários que sejam maiores ou iguais a R$ 1000,00 e menores ou iguais a R$ 1500,00 
+Funcionários pertencentes aos departamentos de produção ou engenharia. 
+Obs: Os departamentos são reconhecidos pelas letras (P) Produção e (E) Engenharia 
+São fornecidos o nome do funcionário (NF), o seu salário (SAL) e o departamento onde trabalha (DEP). */
+class Program {
+  public static void Main (string[] args) {
+    string NF,DEP;
+    double SAL;
+    
+      Console.Write ("Nome de Funcionário(a): ");
+    NF = Console.ReadLine();
+    Console.Write ("Digite a inicial do seu departamento: ");
+    DEP = Console.ReadLine();
+    Console.Write ("Valor do Salario: R$");
+    SAL = double.Parse(Console.ReadLine());
+    
+    
+      if (DEP=="E")
+         Console.Write("Funcionário(a) de Engenharia: ");
+        if (DEP=="P")
+          Console.Write("Funcionário(a) de Produção: ");
+      else
+        Console.Write("Funcionário(a):");
+      if(SAL>=1000&&SAL<=1500)
+      Console.WriteLine("{0}, salário de R${1}.",NF,SAL);
+      else 
+      Console.Write("{0}.",NF);
+  }
+}

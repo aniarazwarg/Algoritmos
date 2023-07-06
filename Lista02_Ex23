@@ -1,0 +1,43 @@
+using System;
+/*Construa um algoritmo que indique o que o motorista deve fazer de acordo com a cor do semáforo (CS) e distância do cruzamento (DC) fornecida pelo usuário. As condições são:
+
+{
+  · (V) Vermelho = Parar
+· (A) Amarelo = se a distância do cruzamento for menor que 5 metros = Passar com cuidado.
+= se a distância do cruzamento for maior ou igual a 5 metros = Parar
+· (D) Verde = Passar*/
+class Program {
+  public static void Main (string[] args) {
+   string CS;
+    double DC ;
+    Console.Write ("Digite a distância do cruzamentro em metros: ");
+    DC=double.Parse(Console.ReadLine()); 
+   do
+   {
+      Console.WriteLine("╔═════════════════════╗ ");
+      Console.WriteLine("║ Qual a cor do sinal ║");
+      Console.WriteLine("║     V - Vermelho    ║");
+      Console.WriteLine("║     A - Amarelo     ║");
+      Console.WriteLine("║     D - Verde       ║");
+      Console.WriteLine("╚═════════════════════╝ ");
+      CS=Console.ReadLine(); 
+      switch (CS) 
+      {
+        case"V":
+        Console.WriteLine("Parar!");
+        break;
+        case"A":
+        if(DC<5)
+        Console.WriteLine("Passar com cuidado");
+        else
+        Console.WriteLine("Parar!");
+        case"D":
+        Console.WriteLine("Passar.");
+        break;
+        default:
+        Console.WriteLine("Opção Inválida!!!");
+       break;
+      }
+    }while(CS!=V && CS!=A && CS!=D);
+  }
+}

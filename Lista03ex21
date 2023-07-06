@@ -1,0 +1,85 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    
+    string op;
+    double PE=0, QP=0, PAG=0, DSC, PAR , CP;
+    do
+      {    
+            do{
+               {Console.WriteLine("╔══════════════════════════════╗ ");
+            Console.WriteLine("║Adicionar produtos à lista   ?║");
+            Console.WriteLine("║      digite: S ou N          ║");
+            Console.WriteLine("╚══════════════════════════════╝ ");
+           op = Console.ReadLine().ToUpper(); 
+      
+            switch(op)
+            {
+              case "S":
+                for(double i=1; i<=1; i++)
+          {
+            do{
+               Console.Write ("quantidade do {0}º produto: ",i);
+               QP=double.Parse(Console.ReadLine());
+            }while(QP<=0);
+            
+            do{
+              Console.Write("preço do {0}º produto: R$ ",i); 
+             PE=double.Parse(Console.ReadLine());
+            }while(PE<=0);
+            
+            PAG=PAG+(QP*PE);
+          }while(QP!=0);
+            
+              break;
+              case "N":
+                
+           Console.WriteLine("valor total da compra : R$ {0}",PAG);
+            Console.WriteLine("╔═════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                Escolha forma de pagamento:              ║");
+            Console.WriteLine("║1:À vista em dinheiro ou cheque, com 10% de desconto.    ║");
+            Console.WriteLine("║2: À vista com cartão de crédito, com 5% de desconto.    ║");
+            Console.WriteLine("║3:Em duas parcelas de , sem juros.                       ║");
+            Console.WriteLine("║4:Em 3 parcelas de  com acréscimo de 10%.                ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════╝");
+          CP= double.Parse(Console.ReadLine()); 
+        switch (CP) 
+        {
+          case 1:
+          DSC=(10*PAG)/100; 
+          PAG=PAG-DSC;
+          Console.WriteLine("À vista em dinheiro ou cheque, com 10% de desconto, R${0}",PAG);
+          break;
+          case 2:
+          DSC=(5*PAG)/100; 
+          PAG=PAG-DSC;
+          Console.WriteLine(" À vista com cartão de crédito, com 5% de desconto, R${0}",PAG);
+          break;
+          case 3:
+          PAG=PAG/2;
+          Console.WriteLine(" R${0} em duas parcelas de R${1}, sem juros.",PE ,PAG);
+          break;
+          case 4:
+          DSC=(10*PAG)/100; 
+          PAG=PAG+DSC;
+          PAR=PAG/3;
+          Console.WriteLine(" R${0} em 3 parcelas de R${1:F2}, com acréscimo de 10%.",PAG ,PAR);
+          break;
+          default: 
+          break;
+        
+    }while(QP!=0);
+            Console.WriteLine("FIM!");
+           break;
+          default:
+            Console.WriteLine("Opção Inválida!!!");
+          break;
+        }while(QP!=0);
+   
+    
+  }while(QP!=0);
+}while(QP!=0);
+    }while(QP!=0);
+  }
+}

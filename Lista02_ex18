@@ -1,0 +1,50 @@
+using System;
+/* 
+Construa um algoritmo que leia o ano de nascimento de uma pessoa (AN) e mostre a sua idade e, também verifique e mostre se essa pessoa já tem idade para votar (16 anos ou mais) e se já pode conseguir a sua carteira de habilitação (18 anos ou mais). */
+class Program {
+  public static void Main (string[] args) {
+    string  ANV;
+    double AA, AN , idade; 
+   Console.Write ("Digite o ano de nascimento: "); 
+   AN=double.Parse(Console.ReadLine ()); 
+   Console.Write (" Digite o ano atual: "); 
+   AA=double.Parse(Console.ReadLine()); 
+   Console.Write (" Voce já fez aniversario esse ano? ");
+    ANV = Console.ReadLine().ToUpper();
+    // charfirst[]; charArray = ANV.ToCharArray(); Console.WriteLine(first);.FirstOrDefault();
+    idade=AA-AN;   
+    switch (ANV) {
+      case "SIM": 
+        Console.WriteLine("Sua idade é: {0} anos",idade);
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+         case "S":  
+        Console.WriteLine("Sua idade é: {0} anos",idade);
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+      case "N":
+        idade=(AA-AN)-1;
+        Console.WriteLine("Sua idade é: {0} anos",idade);
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>=18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+      case "NAO":
+        idade=(AA-AN)-1;
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>=18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+       default:
+        break;
+    }
+  }
+}

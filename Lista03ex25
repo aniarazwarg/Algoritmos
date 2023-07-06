@@ -1,0 +1,42 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+     double HE,ME,HS,MS,PAG=0,MTE,MTS,MM,cont=0,adc=0;
+  Console.Write ("Digite a hora da entrada: ");
+  HE=double.Parse(Console.ReadLine ());
+  Console.Write ("Digite os minutos da entrada: ");
+  ME=double.Parse(Console.ReadLine());
+  Console.Write ("Digite o a hora da saída: ");
+  HS=double.Parse(Console.ReadLine ());
+  Console.Write ("Digite os minutos dada saída: ");
+  MS=double.Parse(Console.ReadLine());
+ 
+  MTE=HE*60+ME;
+  MTS=HS*60+MS;
+  MM=MTS-MTE;
+  cont=MM/60;
+    for(double i=1;i<=cont;i++)
+      adc++;
+      if(cont%60>0)
+        adc++;
+    
+    if (MM>=1 && MM<=60){
+      PAG=4.00;
+    }
+    if (MM>=61 && MM<=120){
+      PAG=6.00;
+    }
+    if(MM>=121){
+      adc=adc-2;
+//cont = (MM-120)/60;
+     // for(double i=1;i<=cont;i++)
+     // adc++;
+     // if(cont%60>0.01 && cont%60<1)
+       // adc++;
+    
+     PAG=+adc+6;
+     }
+Console.WriteLine("O valor a ser pago será:R${0:F2}",PAG);
+  }
+}

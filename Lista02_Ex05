@@ -1,0 +1,22 @@
+using System;
+//Construa um algoritmo que leia um número inteiro (positivo ou negativo) e apresente o seu módulo (número sem sinal).
+class Program {
+  public static void Main (string[] args) {
+  
+   int n;
+      Console.Write ("Digite um número ");
+    n = int.Parse(Console.ReadLine());
+    if (n>0)
+     //Console.WriteLine("o módulo é ",Math.Abs(n));
+      Console.WriteLine("o módulo é {0}",n);
+    
+    else
+      
+      if(n<0)
+    
+     Console.WriteLine("o módulo é {0}",Math.Abs(n));
+    
+      else 
+        Console.Write("o módulo é 0");
+  }
+}

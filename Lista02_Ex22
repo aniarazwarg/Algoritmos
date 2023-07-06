@@ -1,0 +1,39 @@
+using System;
+/*Construa um algoritmo que leia o código de um determinado produto (CP) e mostre a sua classificação, utilizando a seguinte tabela:
+Código do Produto (CP) Classificação
+1 Alimento não perecível
+2, 3 ou 4 Alimento perecível
+5 ou 6 Vestuário
+7 Higiene Pessoal
+8 ou 9 Limpeza e Utensílios Domésticos
+Qualquer outro código Inválido*/
+class Program {
+  public static void Main (string[] args) {
+     int CP ; 
+    if(CP<=1 && CP>=9)
+    {
+      do
+      {
+        Console.Write ("Digite o código do produto: "); 
+    
+        CP=int.Parse(Console.ReadLine());  
+
+        if(CP==1)  
+           Console.WriteLine("Alimento não perecível");     
+        if (CP>=2&&CP<=4)     
+           Console.WriteLine("Alimento perecível");    
+        if (CP>=5&&CP<=6)    
+           Console.WriteLine("Vestuário");    
+        if (CP==7)     
+           Console.WriteLine("Higiene Pessoal"); 
+        if (CP>=8&&CP<=9)      
+           Console.WriteLine("Limpeza e Utensílios Domésticos");
+           
+        else 
+    
+           Console.WriteLine("Inválido!"); 
+      }
+      while;
+    }
+  }
+}

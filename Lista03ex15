@@ -1,0 +1,13 @@
+using System;
+/*Construa um programa que leia um número e indique se ele é par ou impar. O programa só deve levar em consideração valores positivos. */
+class Program {
+  public static void Main (string[] args) {
+    int numdig;
+    Console.WriteLine ("Digite o numero: ");
+    numdig=int.Parse(ConsoleReadLine());
+    if (numdig%2=>0)
+      Console.Write("Numero Par.");
+    else
+      Console.Write("Numero ímpar.");
+  }
+}

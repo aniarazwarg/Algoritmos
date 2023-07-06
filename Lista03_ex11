@@ -1,0 +1,25 @@
+using System;
+/*Construa um programa que leia vários números inteiros e positivos, calculando ao final da seqüência a soma e a média desses números. A seqüência termina quando o usuário entrar com um valor negativo (esse valor não deve fazer parte de nenhum dos cálculos). */
+class Program {
+  public static void Main (string[] args) {
+     long numdig=0, soma=0, media=0, qtnum=0;
+
+    do{
+    for(long i=0; i==1; i++)
+      {
+         do{
+           Console.WriteLine ("Digite o numero: ",i);
+          numdig=long.Parse(Console.ReadLine());
+           if(numdig>=0){
+             qtnum++;
+             soma+=numdig;  
+        media=soma/qtnum++;}
+          
+           
+        }while(numdig=>0);
+         Console.WriteLine ("A soma dos numeros é:{0}  ",soma);
+        Console.WriteLine ("A média dos numeros é:{0}  ",media);
+      }
+    }while(numdig=>0);
+  }
+}

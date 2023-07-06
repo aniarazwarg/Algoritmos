@@ -1,0 +1,65 @@
+using System;
+/*Construa um algoritmo que calcule e apresente a idade REAL de uma pessoa. Será fornecido pelo usuário: 
+DN – dia do nascimento	DH – dia da data de hoje 
+MN – mês do nascimento	MH – mês da data de hoje 
+AN – ano do nascimento	AH – ano da data de hoje 
+ */
+class Program {
+  public static void Main (string[] args) {
+    double DN , MN , AN , AA , MA , DA ,anos,meses,dias; 
+   Console.Write ("Digite o dia de nascimento: "); 
+   DN=double.Parse(Console.ReadLine ()); 
+    Console.Write ("Digite o mês de nascimento: "); 
+   MN=double.Parse(Console.ReadLine ()); 
+    Console.Write ("Digite o ano de nascimento: "); 
+   AN=double.Parse(Console.ReadLine ()); 
+    Console.Write ("Digite o dia atual: "); 
+   DA=e.Parse(Console.ReadLine ()); 
+    Console.Write ("Digite o mês atual: "); 
+   MA=double.Parse(Console.ReadLine ()); 
+   Console.Write (" Digite o ano atual: "); 
+   AA=double.Parse(Console.ReadLine()); 
+
+    
+    anos=AA-AA;
+    dias=anos/365,25;
+    meses=dias/30,417;
+
+    Console.WriteLine("você tem {0}anos e {1}meses.", anos , meses);
+  
+   /* idade=AA-AN;   
+    switch (ANV) {
+      case "SIM": 
+        Console.WriteLine("Sua idade é: {0} anos",idade);
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+         case "S":  
+        Console.WriteLine("Sua idade é: {0} anos",idade);
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+      case "N":
+        idade=(AA-AN)-1;
+        Console.WriteLine("Sua idade é: {0} anos",idade);
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>=18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+      case "NAO":
+        idade=(AA-AN)-1;
+        if (idade>=16)
+          Console.WriteLine("Você ja pode votar!");
+          if (idade>=18)
+          Console.WriteLine("Você ja pode ter habilitação!");
+        break;
+       default:
+        break;
+    }
+  }*/
+}

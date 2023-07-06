@@ -1,0 +1,32 @@
+using System;
+/*Construa um programa que leia vários números inteiros e mostre qual foi o menor valor fornecido. Para cada valor digitado, deve ser solicitado ao usuário que ele digite se ele deseja continuar entrando com valores. 
+
+OBS: Não se esqueça de validar a resposta do usuário, pois ele só pode responder “S” ou “N”.*/
+class Program {
+  public static void Main (string[] args) {
+    string op;
+      long numdig=0, maValor=0 ;
+
+    
+      
+    do
+    {
+      
+       for(long i=1; i<=1; i++)
+      {
+       
+          Console.Write ("Digite um valor inteiro: ",i);
+          numdig=long.Parse(Console.ReadLine());
+         
+          if (numdig>maValor)
+            maValor=numdig;  
+      }
+      Console.WriteLine ("O maior valor é: {0}.",maValor);
+      Console.WriteLine("  Deseja continuar ?");
+      Console.WriteLine("   digite: S ou N ");
+      op = Console.ReadLine().ToUpper(); 
+    }while(op=="S");
+      if (op!="S")
+      Console.Write("FIM");
+  }
+}

@@ -1,0 +1,29 @@
+using System;
+/*Construa um algoritmo que leia dois números (A e B). Caso A seja igual a B, apresentar a soma dos dois. Caso um seja maior que o outro, apresentar a diferença entre os dois números (sempre lembrando que a diferença entre dois números é SEMPRE positiva). */
+class Program {
+  public static void Main (string[] args) {
+   int A, B ,R;
+     Console.Write ("Digite o numero A: ");
+    A = int.Parse(Console.ReadLine());
+    Console.Write ("Digite o numero B: ");
+    B = int.Parse(Console.ReadLine());
+
+    if (A==B)
+    {
+      R=A+B;
+      Console.WriteLine("a soma é: {0}",R);
+    }
+    else
+    if (A>B)
+    {
+      R=A-B;
+     Console.WriteLine("a diferença é: {0}",R);
+    }
+    else
+    if (A<B)
+    {
+      R=B-A;
+      Console.WriteLine("a diferença é: {0}",R);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+using System;
+/*Construa um algoritmo que, dados os comprimentos dos três lados (A, B e C) de um triângulo, verifique o tipo de triângulo formado. Apresentar qual é o tipo. Sabe-se que: 
+Triângulo do tipo Eqüilátero – possui os três lados iguais 
+Triangulo do tipo Isósceles – possui dois lados iguais 
+Triângulo do tipo Escaleno – possui os três lados diferentes */
+class Program {
+  public static void Main (string[] args) {
+  int A, B, C, tt12, tt23, tt13; 
+    Console.Write("Digite o 1- lado:");  
+    A=int.Parse(Console.ReadLine()); 
+    Console.Write("Digite o 2- lado:");  
+    B=int.Parse(Console.ReadLine()); 
+    Console.Write("Digite o 3- lado:");  
+    C=int.Parse(Console.ReadLine()); 
+    tt12 = A+B; 
+    tt23 = B+C; 
+    tt13 = A+C; 
+    if(tt12>C && tt23>A && tt13>B) 
+
+      if(A==B && A==C) 
+          Console.Write("Triangulo Equilatero"); 
+      else 
+        if(A==B || A==C || B==C) 
+          Console.Write("Triangulo Isoceles"); 
+        else 
+          Console.Write("Triangulo Escaleno"); 
+    else 
+      Console.Write("Não forma Triangulo"); 
+  } 
+} 

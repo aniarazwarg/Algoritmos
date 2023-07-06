@@ -1,0 +1,27 @@
+using System;
+/*Construa um programa que leia o conjunto de 20 números inteiros e mostre qual foi o maior e o menor valor fornecido.  */
+class Program {
+  public static void Main (string[] args) {
+    long numdig, meValor=999999999999999, maValor=0 ;
+
+    
+    for(long i=1; i<=20; i++)
+    {
+      do
+      {
+        Console.WriteLine ("Valor do {0}ºnumero: ",i);
+        numdig=long.Parse(Console.ReadLine());
+       
+        if (numdig>maValor)
+          maValor=numdig;
+        if (numdig<meValor)
+          meValor=numdig;
+            
+        }while(numdig<=0);
+    }
+   
+    Console.WriteLine ("O menor valor é:{0}  ",meValor);
+    Console.WriteLine ("A maior valor é:{0}  ",maValor);
+    
+  }
+}

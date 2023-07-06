@@ -1,0 +1,40 @@
+using System;
+//transformando em matriz.
+class Program {
+  public static void Main (string[] args) {
+   // int[] idade - new int[7];
+   //  double[]peso = new double[7];
+    double [,]dados = new double[2,7];
+    int qtd90=0;
+    double mdidade=0,ttidade=0;
+
+    for(int i=0;i<7;i++)
+    {
+      Console.Write("digite {0}ª idade: " ,i+1);
+      dados[0,i] = double.Parse(Console.ReadLine());
+      //idade = int.Parse(Console.ReadLine());
+      Console.Write("digite {0}º peso:  ",i+1);
+      //peso = int.Parse(Console.ReadLine());
+      dados[1,i] = double.Parse(Console.ReadLine());
+    
+      Console.WriteLine("");
+      
+    }
+     for(int i=0;i<7;i++)
+     {
+       //if (peso[i]>90)
+       if (dados[1,i]>90)
+         qtd90++;
+     }
+     Console.WriteLine("{0} pessoas com peso >90.",qtd90);
+    
+    for(int i=0;i<7;i++)
+    {
+      //ttidade+=idade[i];
+      ttidade+=dados[0,i];
+      mdidade=ttidade/7.0;
+    }
+     Console.WriteLine("Média das idades: {0:F2}",mdidade);
+  
+  }
+}

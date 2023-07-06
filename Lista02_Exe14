@@ -1,0 +1,38 @@
+using System;
+/*Construa um algoritmo que leia as informações de: horas trabalhadas (HT), valor da hora trabalhada (VH). Calcule e apresente o salário líquido do empregado, baseado nas tabelas
+abaixo.
+OBS: Salário Líquido = Salário Bruto – INSS – Imposto de Renda
+a) Salário Bruto = Horas trabalhadas * Valor da hora trabalhada
+b) INSS = 11% do salário líquido
+c) Imposto de Renda  após descontar o INSS usar esse valor e ler a alíquota do imposto
+de renda e parcela a deduzir na tabela abaixo
+
+Salário Bruto – INSS         | Alíquota  |    Valor a Deduzir
+Até $1.257,12                |   Isento  |        (0%)
+De $1.257,13 até $2.512,08   |    15%    |       $188,57
+Mais que $2.512,08           |   27,5%   |       $502,58
+
+OBS: Imposto de Renda = Alíquota * (Salário Bruto – INSS) – Valor a Deduzir*/
+
+class Program {
+  public static void Main (string[] args) {
+  double ht, vh, sl, sb, inss,ir1, ir2,sl2,sl3;
+  Console.Write("Digite as horas trabalhadas:");
+  ht=double.Parse(Console.ReadLine());
+  Console.Write("Digite o valor da hora trabalhada:");
+  vh=double.Parse(Console.ReadLine());
+  sb=ht*vh;
+  inss=sb*0.11;
+  ir1=0.15*(sb-inss)-188.57;
+  ir2=0.275*(sb-inss)-502.58;
+  sl= sb-inss;
+  sl2= sb-inss-ir1;
+  sl3= sb-inss-ir2;
+  if(sl<=1257.12)
+    Console.WriteLine("Seu salário líquido é:{0}",sl);
+    if(sl>=1257.13 && sl<=2512.08)
+      Console.WriteLine("Seu salário líquido é: {0}",sl2);
+      if(sl>2512.08)
+        Console.WriteLine("Seu salário líquido é:{0}",sl3);
+  }
+}
